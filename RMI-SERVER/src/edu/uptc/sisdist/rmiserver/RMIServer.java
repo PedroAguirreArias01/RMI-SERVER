@@ -38,6 +38,7 @@ public class RMIServer {
     public static void main(String[] args) {
         System.out.println("Servidor RMI lanzado!");
         new RMIServer();
+        //lnlknlkcxnlcnk
     }
 
 }
