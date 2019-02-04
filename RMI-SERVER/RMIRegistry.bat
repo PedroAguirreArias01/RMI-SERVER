@@ -1,2 +1,2 @@
-cd C:\Users\RA302\Desktop\RMI-JAVA\RMIServer\build\classes
-"C:\Program Files\Java\jdk1.8.0_161\bin\RMIRegistry.exe"
+cd C:\Users\PEDRO\Desktop\RMI-SERVER\RMI-SERVER\build\classes
+"C:\Program Files\Java\jdk1.8.0_111\bin\RMIRegistry.exe"

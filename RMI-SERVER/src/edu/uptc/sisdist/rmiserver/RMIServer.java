@@ -22,7 +22,7 @@ public class RMIServer {
             // mantener la barra al final.
             System.setProperty(
                     "java.rmi.server.codebase",
-                    "file:/C:/Users/RA302/Desktop/RMI-JAVA/RMIServer/build/classes");
+                    "file:/C:/Users/PEDRO/Desktop/RMI-SERVER/RMI-SERVER/build/classes");
 
             // Se publica el objeto remoto
             InterfaceRemota objetoRemoto = new ObjetoRemoto();
