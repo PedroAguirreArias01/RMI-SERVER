@@ -41,5 +41,20 @@ public class ObjetoRemoto extends UnicastRemoteObject implements InterfaceRemota
          System.out.println ("Dividiendo " + a + " * " + b +"...");
         return a/b;
     }
+
+    @Override
+    public String mensaje(String mensaje) throws RemoteException {
+        return mensaje; //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String clientIP(String ip) throws RemoteException {
+        return ip; //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String nombre(String nombre) throws RemoteException {
+        return nombre; //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

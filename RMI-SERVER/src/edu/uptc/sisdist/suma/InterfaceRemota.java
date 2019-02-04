@@ -5,7 +5,6 @@
  */
 package edu.uptc.sisdist.suma;
 import java.rmi.*;
-import java.io.Serializable;
 /**
  * Interface remota con los métodos que se pueden llamar de forma remota
  * @author Carlos Arenas
@@ -13,6 +12,11 @@ import java.io.Serializable;
 public interface InterfaceRemota extends Remote {
     public int suma (int a, int b) throws RemoteException; 
     public int multiplicar(int a, int b) throws RemoteException;
-     public int resta (int a, int b) throws RemoteException; 
+    public int resta (int a, int b) throws RemoteException; 
     public int division(int a, int b) throws RemoteException;
+    
+    public String mensaje(String mensaje) throws  RemoteException;
+    public String clientIP(String ip) throws RemoteException;
+    public String nombre(String nombre) throws RemoteException;
+    
 }
