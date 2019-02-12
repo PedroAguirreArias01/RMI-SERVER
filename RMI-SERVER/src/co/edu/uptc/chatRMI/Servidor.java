@@ -2,8 +2,6 @@ package co.edu.uptc.chatRMI;
 
 
 
-import java.rmi.AlreadyBoundException;
-import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -50,6 +48,7 @@ public class Servidor implements InterfazServidor {
     
 
     
+    @Override
     public boolean desconectar (String login) { //return true si desconectado
         
         boolean desconectado = false;
@@ -77,7 +76,7 @@ public class Servidor implements InterfazServidor {
             InterfazServidor interfaz = new Servidor();
             InterfazServidor stub = (InterfazServidor) UnicastRemoteObject.exportObject(interfaz, 0);
             Registry registry = LocateRegistry.getRegistry();
-            String nombre_objeto_remoto = "//127.0.0.1/servidor";
+            String nombre_objeto_remoto = "//localhost/servidor";
             registry.rebind(nombre_objeto_remoto, stub);
             //Naming.rebind (nombre_objeto_remoto, interfaz);
             System.out.println("Servidor bound");
@@ -133,8 +132,8 @@ public class Servidor implements InterfazServidor {
  
     
     public static void main(String args[]) {
-        System.setProperty("java.security.policy","file:G:/UPTC/Docencia/2018-02/SistemasDistribuidos/Talleres/ChatRMIServer/server.policy");
-        System.setProperty("java.rmi.server.codebase","file:/G:/UPTC/Docencia/2018-02/SistemasDistribuidos/Talleres/ChatRMIServer/build/classes/co/edu/uptc/ChatRMI");
+        System.setProperty("java.security.policy","file:C:/Users/PEDRO/Desktop/RMI-SERVER/RMI-SERVER/server.policy");
+        System.setProperty("java.rmi.server.codebase","file:/C:/Users/PEDRO/Desktop/RMI-SERVER/RMI-SERVER/build/classes/co/edu/uptc/chatRMI");
         Servidor server = new Servidor();
         server.inicializarObjetoRemoto();
         //hostRegistry = args[0];
